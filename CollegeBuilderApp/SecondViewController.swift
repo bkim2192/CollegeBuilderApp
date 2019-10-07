@@ -11,6 +11,8 @@ import UIKit
 class SecondViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
+    @IBOutlet weak var numberTextFIeld: UITextField!
+    @IBOutlet weak var urlTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +29,9 @@ class SecondViewController: UIViewController {
          //storing the task into core data
         college.name = nameTextField.text!
         college.location = locationTextField.text!
+        college.numberOfStudents = Int32(Int(numberTextFIeld.text!)!)
+        college.url = urlTextField.text!
+        
         // task.dueDate = datePicker.date
          
          
