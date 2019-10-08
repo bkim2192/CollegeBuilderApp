@@ -21,6 +21,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        let college1 = College(context: context)
+        college1.order = colleges[IndexPath.row]
            getData()
            tableView.reloadData()
            
@@ -54,6 +56,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
      func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
         return false
+        
     }
     
     
@@ -63,6 +66,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         colleges.remove(at: sourceIndexPath.row)
         colleges.insert(movedObject, at: destinationIndexPath.row)
         
+
     }
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {

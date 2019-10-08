@@ -31,7 +31,7 @@ class SecondViewController: UIViewController {
         college.location = locationTextField.text!
         college.numberOfStudents = Int32(Int(numberTextFIeld.text!)!)
         college.url = urlTextField.text!
-        
+        college.order = 0
         // task.dueDate = datePicker.date
          
          
